@@ -289,11 +289,11 @@ $(function () {
 		autoOpen: false,
 		show: {
 			effect: "blind",
-			duration: 2000
+			duration: 1000
 		},
 		hide: {
 			effect: "fade",
-			duration: 2000
+			duration: 500
 		}
 	});
 	$("#openDialog").on("click", function(){
