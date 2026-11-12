@@ -1,83 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>jQuery Plugins &amp; Widgets</title>
-        <meta name="author" content="Jessica Barnett">
-        <meta name="description" content="Practice working with jQuery UI's widgets, plugins, and effects.">
 
-        <!-- Favicon -->
-        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery Plugins &amp; Widgets</title>
+    <meta name="author" content="Jessica Barnett">
+    <meta name="description" content="Practice working with jQuery UI's widgets, plugins, and effects.">
 
-        <!-- Stylesheets & Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/default.min.css">
-        <!-- TO DO: link to the jQuery structure CSS file locally -->
-        
-        <!-- TO DO: link to the jQuery theme CSS file locally -->
-        
-        <!-- TO DO: link to the Spectrum Color Picker CSS file on the CDN (find at https://github.com/bgrins/spectrum#using-spectrum-with-a-cdn) -->
-        
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.12.0/styles/default.min.css">
-        <link href="styles.css" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
 
-        <!-- JavaScript -->
-        <!-- TO DO: link to the jQuery js file locally -->
-        
-        <!-- TO DO: link to the jQuery UI js file locally -->
-        
-        <!-- TO DO: link to the spectrum color picker JS on the CDN (find at https://github.com/bgrins/spectrum#using-spectrum-with-a-cdn) -->
-        
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.12.0/highlight.min.js"></script>
-        <script src="scripts.js" async></script>
-    </head>
+    <!-- Stylesheets & Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/default.min.css">
+    <!-- link to the jQuery structure CSS file locally -->
+    <link href="jquery-ui-1.14.2.custom/jquery-ui.structure.css" rel="stylesheet">
+    <!-- link to the jQuery theme CSS file locally -->
+    <link href="jquery-ui-1.14.2.custom/jquery-ui.theme.css" rel="stylesheet">
+    <!-- link to the Spectrum Color Picker CSS file on the CDN (find at https://github.com/bgrins/spectrum#using-spectrum-with-a-cdn) -->
+    <link href="https://github.com/bgrins/spectrum#using-spectrum-with-a-cdn" rel="stylesheet" type="text/css">
+    <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.css">
+    <!-- JavaScript -->
+    <!-- link to the jQuery js file locally -->
+    <script src="jquery-ui-1.14.2.custom/external/jquery/jquery.js"></script>
+    <!-- link to the jQuery UI js file locally -->
+    <script src="jquery-ui-1.14.2.custom/jquery-ui.js"></script>
+    <!-- link to the spectrum color picker JS on the CDN (find at https://github.com/bgrins/spectrum#using-spectrum-with-a-cdn) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.12.0/highlight.min.js"></script>
+    <script src="scripts.js" async></script>
+</head>
 
-    <body id="top">
-        <a href="#main" id="skip" title="Skip to Main Content">Skip to Main Content</a>
-        
-        <header>
-            <h1>Module 6 JavaScript Practice - jQuery Plugins &amp; Widgets</h1>
-            <nav aria-label="Main Navigation">
-                <ul>
-                    <li><a href="#pluginsIntro">Introduction to jQuery Plugins</a></li>
-                    <li><a href="#jqueryUi">jQuery UI Plugin</a></li>
-                    <li><a href="#animations">jQuery UI Animations</a></li>
-                    <li><a href="#widgets">jQuery UI Widgets</a></li>
-                </ul>
-            </nav>
-        </header>
+<body id="top">
+    <a href="#main" id="skip" title="Skip to Main Content">Skip to Main Content</a>
 
-        <main id="main">
-            <h2 class="sr-only">jQuery Plugins &amp; Widgets</h2>
+    <header>
+        <h1>Module 6 JavaScript Practice - jQuery Plugins &amp; Widgets</h1>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="#pluginsIntro">Introduction to jQuery Plugins</a></li>
+                <li><a href="#jqueryUi">jQuery UI Plugin</a></li>
+                <li><a href="#animations">jQuery UI Animations</a></li>
+                <li><a href="#widgets">jQuery UI Widgets</a></li>
+            </ul>
+        </nav>
+    </header>
 
-            <section id="pluginsIntro">
-                <h3>Introduction to jQuery Plugins</h3>
-                <p>jQuery's plugin architecture allows developers to add additional functionality like new selectors and user interface (UI) widgets. The <a href="http://plugins.jquery.com/" target="_blank">jQuery Plugin Registry</a> organizes plugins into categories and provides links to download and use the plugins. An <a href="http://forum.jquery.com/using-jquery-plugins" target="_blank">active forum</a> exists for developers seeking help creating or using plugins.</p>
-                <p>Below, we are going to add a color picker plugin that we will use to update the svg in this section. You can <a href="http://bgrins.github.io/spectrum/">find the documentation for this plugin on their GitHub Pages site</a>.</p>
-                <div id="colorGridDiv">
-                    <label for="flat">Choose a Color:</label>
-                    <input type="text" name="flat" id="flat">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 100">
-                        <path d="M86.731,33.593C83.892,25.388,76.214,20.2,68.02,19.879c-2.714-4.605-7.201-8.16-12.792-9.522  c-8.428-2.053-17.021,1.618-21.731,8.323c-5.829-0.152-11.683,2.157-15.853,6.846c-5.786,6.508-6.435,15.963-2.67,23.279  c-2.778,4.756-3.669,10.599-1.949,16.274c2.525,8.335,10.149,13.826,18.354,14.438c2.896,5.305,8.082,9.299,14.487,10.408  c8.585,1.486,16.851-2.638,21.08-9.701c-0.378,0.012-0.76-0.011-1.141-0.02c-4.105,6.423-11.799,10.115-19.768,8.736  c-10.594-1.834-17.722-11.946-15.888-22.541c1.547-8.935,8.987-15.372,17.633-16.079c0.019,0.132,0.049,0.258,0.09,0.381  c-0.603,1.234-1.075,2.512-1.415,3.817c-6.15,1.183-11.237,6.036-12.367,12.563c-1.458,8.422,4.207,16.459,12.629,17.917  c5.663,0.98,11.142-1.269,14.574-5.402c-0.36-0.09-0.715-0.189-1.067-0.297c-3.225,3.646-8.198,5.603-13.337,4.714  c-7.878-1.364-13.178-8.883-11.814-16.761c1.031-5.954,5.579-10.428,11.139-11.673c-0.311,1.522-0.441,3.068-0.405,4.612  c-0.003-0.11-0.01-0.219-0.011-0.33c-3.426,1.245-6.116,4.232-6.782,8.074c-0.988,5.705,2.85,11.15,8.555,12.137  c3.249,0.562,6.41-0.444,8.715-2.464c-0.064-0.036-0.126-0.074-0.19-0.109c8.21,4.7,18.887,3.214,25.448-4.11  c5.641-6.297,6.631-15.137,3.264-22.354C87.912,45.977,88.818,39.624,86.731,33.593z M85.786,33.92  c3.516,10.161-1.89,21.288-12.051,24.804c-8.337,2.885-17.297-0.261-22.196-7.088c0.276-0.259,0.479-0.587,0.597-0.956  c1.102-0.096,2.186-0.285,3.245-0.553c4.008,4.818,10.783,6.984,17.046,4.817c8.077-2.795,12.374-11.639,9.579-19.716  c-1.876-5.421-6.539-9.133-11.803-10.147c-0.385-1.459-0.943-2.858-1.631-4.189C76.139,21.419,83.153,26.312,85.786,33.92z   M59.268,67.53c4.312,3.863,10.964,3.498,14.827-0.815c2.077-2.319,2.912-5.313,2.587-8.187c1.308-0.668,2.517-1.463,3.622-2.367  c1.137,4.518,0.105,9.5-3.23,13.224c-5.335,5.955-14.52,6.46-20.475,1.125c-4.49-4.022-5.754-10.508-3.88-15.875  c1.048,1.066,3.371,2.758,3.331,2.733C55.288,60.932,56.364,64.928,59.268,67.53z M62.604,63.805  c2.259,2.024,5.743,1.832,7.766-0.427c0.795-0.887,1.229-1.966,1.349-3.068c0.783-0.171,1.565-0.372,2.341-0.641  c0.57-0.197,1.119-0.429,1.661-0.67c0.188,2.489-0.578,5.047-2.372,7.048c-3.495,3.902-9.513,4.232-13.415,0.737  c-2.534-2.27-3.52-5.733-2.971-8.862c1.212,0.712,2.488,1.311,3.82,1.765C60.779,61.204,61.389,62.716,62.604,63.805z   M61.796,60.017c2.833,0.804,5.857,1.002,8.877,0.506c-0.141,0.788-0.474,1.549-1.047,2.188c-1.656,1.848-4.506,2.005-6.354,0.349  C62.364,62.248,61.873,61.146,61.796,60.017z M69.865,36.619c0.733,0.526,1.432,1.299,1.745,2.206  c0.811,2.345-0.436,4.913-2.781,5.724c-1.172,0.406-2.463,0.217-3.501-0.287C67.335,42.129,68.912,39.551,69.865,36.619z   M64.603,45.006c1.325,0.744,3.009,1.023,4.553,0.488c2.866-0.992,4.391-4.131,3.399-6.996c-0.426-1.23-1.367-2.258-2.397-2.902  c0.042-0.158,0.096-0.31,0.135-0.469c0.302-1.24,0.467-2.48,0.536-3.71c-0.001,0.028,0,0.057-0.002,0.086  c2.466,0.991,4.572,2.986,5.507,5.689c1.713,4.95-0.921,10.371-5.871,12.084c-3.223,1.115-6.716,0.345-9.185-1.665  c-0.051,0.032-0.104,0.061-0.155,0.092C62.375,46.932,63.54,46.027,64.603,45.006z M70.791,50.219  c5.471-1.893,8.383-7.884,6.489-13.356c-1.077-3.112-3.544-5.382-6.424-6.424c0.012-1.457-0.136-2.89-0.425-4.287  c4.75,1.061,8.925,4.476,10.629,9.403c2.615,7.556-1.406,15.83-8.961,18.444c-5.714,1.977-11.898,0.099-15.675-4.173  c1.587-0.492,3.106-1.168,4.522-2.019c-0.191,0.116-0.381,0.234-0.577,0.344C63.114,50.549,67.107,51.494,70.791,50.219z   M54.99,11.329c10.447,2.544,16.876,13.114,14.331,23.561c-2.015,8.274-9.069,14-17.104,14.769  c-0.091-0.596-0.414-1.112-0.877-1.458c0.414-0.841,0.763-1.703,1.055-2.581c6.154-0.818,11.485-5.292,13.04-11.677  c2.023-8.304-3.087-16.705-11.391-18.728c-5.582-1.36-11.199,0.514-14.902,4.404c-1.464-0.461-2.967-0.747-4.48-0.872  C39.207,12.692,47.184,9.427,54.99,11.329z M51.677,24.931c-1.259-0.307-2.522-0.145-3.615,0.363c-0.466-0.507-0.953-1-1.478-1.467  c-0.533-0.474-1.084-0.913-1.65-1.321c2.161-1.512,4.931-2.133,7.689-1.461c5.089,1.24,8.222,6.389,6.982,11.478  c-0.794,3.26-3.2,5.7-6.159,6.719c0.006-1.398-0.142-2.792-0.418-4.164c1.3-0.718,2.313-1.948,2.691-3.501  C56.437,28.63,54.623,25.648,51.677,24.931z M51.441,25.902c2.411,0.587,3.894,3.026,3.307,5.437  c-0.284,1.166-1.008,2.104-1.945,2.707c-0.731-2.86-2.087-5.579-4.046-7.948C49.586,25.775,50.511,25.676,51.441,25.902z   M53.403,40.309c3.44-1.044,6.264-3.811,7.174-7.549c1.37-5.625-2.091-11.316-7.717-12.687c-3.189-0.777-6.396,0.005-8.828,1.849  c-1.228-0.79-2.514-1.436-3.845-1.936c3.463-3.418,8.555-5.033,13.62-3.799c7.768,1.892,12.549,9.752,10.657,17.52  c-1.416,5.813-6.176,9.941-11.736,10.864C53.109,43.172,53.323,41.743,53.403,40.309z M18.391,26.191  c7.144-8.035,19.494-8.761,27.53-1.616c6.705,5.962,8.285,15.535,4.484,23.214c-0.132-0.024-0.266-0.041-0.404-0.041  c-0.1,0-0.196,0.017-0.293,0.03c-0.689-1.035-1.475-1.986-2.326-2.866c2.236-5.849,0.83-12.948-4.119-17.348  c-6.387-5.679-16.204-5.103-21.883,1.285c-3.808,4.283-4.636,10.457-2.952,15.544c-1.073,1.038-2.037,2.175-2.855,3.409  C12.31,40.935,13.031,32.219,18.391,26.191z M38.353,39.461c-0.005-1.517-0.523-3.346-1.735-4.424  c-2.267-2.015-5.75-1.81-7.765,0.456c-0.87,0.978-1.302,2.592-1.357,3.817c-0.265,0.069-0.531,0.125-0.796,0.206  c-1.076,0.326-2.09,0.753-3.068,1.232c-0.333-2.63,0.338-5.782,2.232-7.913c3.481-3.915,9.497-4.268,13.412-0.787  c2.546,2.264,3.51,5.867,2.968,9.001C41.006,40.392,39.704,39.856,38.353,39.461z M37.349,39.204  c-2.828-0.674-5.825-0.762-8.816-0.147c0.098-0.916,0.426-2.178,1.067-2.899c1.649-1.854,4.499-2.022,6.353-0.373  C36.875,36.604,37.279,38.054,37.349,39.204z M39.94,31.301c-4.327-3.847-10.977-3.457-14.824,0.87  c-2.178,2.449-2.913,6.04-2.429,9.052c-1.244,0.691-2.392,1.506-3.444,2.419c-1.38-4.654-0.571-10.244,2.883-14.129  c5.312-5.975,14.496-6.514,20.471-1.202c4.514,4.013,5.881,10.453,4.011,15.833c-1.057-0.981-2.216-1.836-3.446-2.573  C43.906,38.008,42.849,33.888,39.94,31.301z M27.38,60.73c0.384,1.267,1.348,2.38,2.372,3.063c0.001-0.004,0.003-0.007,0.004-0.011  c-0.241,0.795-0.448,1.607-0.593,2.446c-0.097,0.563-0.154,1.123-0.204,1.682c0.003-0.031,0.002-0.063,0.005-0.094  c-2.425-1.087-4.583-3.19-5.412-5.927c-1.519-5.013,1.324-10.328,6.338-11.846c3.264-0.989,6.682-0.058,9.07,2.047  c0.027-0.015,0.055-0.029,0.081-0.044c-1.222,0.713-2.372,1.547-3.424,2.494c-1.296-0.797-3.003-1.143-4.568-0.668  C28.146,54.751,26.501,57.828,27.38,60.73z M30.084,62.784c-0.732-0.555-1.463-1.404-1.747-2.344  c-0.719-2.375,0.627-4.892,3.002-5.612c1.193-0.361,2.516-0.119,3.535,0.431C32.78,57.346,31.124,59.895,30.084,62.784z   M39.805,51.63c0.029-0.015,0.057-0.032,0.086-0.047c-2.651-2.503-6.56-3.628-10.292-2.497c-5.541,1.679-8.683,7.552-7.005,13.093  c0.955,3.154,3.465,5.547,6.304,6.7c-0.068,1.617,0.059,3.205,0.36,4.746c-0.03-0.156-0.066-0.313-0.092-0.469  c-4.706-1.244-8.889-4.826-10.401-9.817c-2.318-7.652,2.021-15.763,9.673-18.081c5.788-1.754,11.835,0.307,15.443,4.725  c0.261-0.07,0.522-0.133,0.783-0.195C42.961,50.193,41.333,50.823,39.805,51.63z M44.935,49.72  c-3.817-4.971-10.442-7.341-16.785-5.419c-8.18,2.478-12.818,11.148-10.34,19.328c1.665,5.497,6.332,9.397,11.562,10.611  c0.335,1.475,0.84,2.893,1.481,4.243c-7.566-0.8-14.531-5.969-16.871-13.694c-3.117-10.29,2.718-21.199,13.009-24.316  c8.336-2.526,17.054,0.844,21.729,7.679c-0.397,0.276-0.693,0.678-0.847,1.146C46.876,49.371,45.894,49.507,44.935,49.72z   M55.362,77.074c-2.06,1.679-4.802,2.499-7.62,2.012c-5.161-0.894-8.634-5.82-7.74-10.981c0.581-3.359,2.875-5.992,5.826-7.183  c0.083,1.4,0.318,2.789,0.684,4.148c-0.003-0.011-0.006-0.022-0.01-0.034c-1.306,0.798-2.278,2.128-2.559,3.75  c-0.517,2.988,1.493,5.84,4.481,6.358c1.305,0.226,2.583-0.031,3.653-0.639c-0.154-0.149-0.296-0.309-0.441-0.466  c0.312,0.318,0.623,0.638,0.959,0.939c1.018,0.912,2.106,1.698,3.24,2.369C55.677,77.258,55.516,77.171,55.362,77.074z   M46.786,66.04c0.907,2.808,2.428,5.45,4.554,7.709c-0.824,0.407-1.773,0.579-2.746,0.41c-2.445-0.423-4.09-2.757-3.666-5.202  C45.141,67.729,45.837,66.704,46.786,66.04z M80.799,72.72c-7.174,8.009-19.527,8.688-27.536,1.513  c-6.483-5.807-8.135-14.998-4.732-22.54c0.395,0.343,0.905,0.558,1.47,0.558c0.223,0,0.434-0.042,0.637-0.103  c0.442,0.623,0.927,1.205,1.43,1.768c-0.033-0.034-0.069-0.066-0.102-0.101c-2.266,5.844-0.971,13.015,3.966,17.438  c6.366,5.703,16.185,5.163,21.887-1.203c3.68-4.108,4.742-9.649,3.334-14.598c1.141-1.041,2.138-2.211,3.009-3.466  C87.069,58.751,86.026,66.885,80.799,72.72z"></path>
-                    </svg>
-                </div>
-            </section>
+    <main id="main">
+        <h2 class="sr-only">jQuery Plugins &amp; Widgets</h2>
 
-            <section id="jqueryUi">
-                <h3>jQuery UI Plugin</h3>
-                <p>jQuery UI is a popular collection of jQuery plugins that are grouped into four categories:</p>
-                <ol>
-                    <li><strong>Interactions</strong> - support for dragging, dropping, sorting, selecting, and resizing</li>
-                    <li><strong>Widgets</strong> - buttons, accordions, date pickers, dialog boxes, sliders, etc.</li>
-                    <li><strong>Effects</strong> - color animation, easing functions, and animation effects</li>
-                    <li><strong>Utilities</strong> - position elements on the screen, widget factory</li>
-                </ol>
-                <p>Developers can obtain the jQuery UI library from <a href="https://jqueryui.com/" target="_blank">jqueryui.com</a> and place the library on their web server, or developers can use a CDN, such as <a href="https://developers.google.com/speed/libraries/" target="_blank">Google Hosted Libraries</a>, to download the library to the browser. The library works with an external stylesheet, which defines numerous classes needed by the library. <strong>The jQuery UI stylesheet must be downloaded to the browser along with the jQuery UI library</strong>.</p>
-                <pre>
+        <section id="pluginsIntro">
+            <h3>Introduction to jQuery Plugins</h3>
+            <p>jQuery's plugin architecture allows developers to add additional functionality like new selectors and user interface (UI) widgets. The <a href="http://plugins.jquery.com/" target="_blank">jQuery Plugin Registry</a> organizes plugins into categories and provides links to download and use the plugins. An <a href="http://forum.jquery.com/using-jquery-plugins" target="_blank">active forum</a> exists for developers seeking help creating or using plugins.</p>
+            <p>Below, we are going to add a color picker plugin that we will use to update the svg in this section. You can <a href="http://bgrins.github.io/spectrum/">find the documentation for this plugin on their GitHub Pages site</a>.</p>
+            <div id="colorGridDiv">
+                <label for="flat">Choose a Color:</label>
+                <input type="text" name="flat" id="flat">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 100">
+                    <path d="M86.731,33.593C83.892,25.388,76.214,20.2,68.02,19.879c-2.714-4.605-7.201-8.16-12.792-9.522  c-8.428-2.053-17.021,1.618-21.731,8.323c-5.829-0.152-11.683,2.157-15.853,6.846c-5.786,6.508-6.435,15.963-2.67,23.279  c-2.778,4.756-3.669,10.599-1.949,16.274c2.525,8.335,10.149,13.826,18.354,14.438c2.896,5.305,8.082,9.299,14.487,10.408  c8.585,1.486,16.851-2.638,21.08-9.701c-0.378,0.012-0.76-0.011-1.141-0.02c-4.105,6.423-11.799,10.115-19.768,8.736  c-10.594-1.834-17.722-11.946-15.888-22.541c1.547-8.935,8.987-15.372,17.633-16.079c0.019,0.132,0.049,0.258,0.09,0.381  c-0.603,1.234-1.075,2.512-1.415,3.817c-6.15,1.183-11.237,6.036-12.367,12.563c-1.458,8.422,4.207,16.459,12.629,17.917  c5.663,0.98,11.142-1.269,14.574-5.402c-0.36-0.09-0.715-0.189-1.067-0.297c-3.225,3.646-8.198,5.603-13.337,4.714  c-7.878-1.364-13.178-8.883-11.814-16.761c1.031-5.954,5.579-10.428,11.139-11.673c-0.311,1.522-0.441,3.068-0.405,4.612  c-0.003-0.11-0.01-0.219-0.011-0.33c-3.426,1.245-6.116,4.232-6.782,8.074c-0.988,5.705,2.85,11.15,8.555,12.137  c3.249,0.562,6.41-0.444,8.715-2.464c-0.064-0.036-0.126-0.074-0.19-0.109c8.21,4.7,18.887,3.214,25.448-4.11  c5.641-6.297,6.631-15.137,3.264-22.354C87.912,45.977,88.818,39.624,86.731,33.593z M85.786,33.92  c3.516,10.161-1.89,21.288-12.051,24.804c-8.337,2.885-17.297-0.261-22.196-7.088c0.276-0.259,0.479-0.587,0.597-0.956  c1.102-0.096,2.186-0.285,3.245-0.553c4.008,4.818,10.783,6.984,17.046,4.817c8.077-2.795,12.374-11.639,9.579-19.716  c-1.876-5.421-6.539-9.133-11.803-10.147c-0.385-1.459-0.943-2.858-1.631-4.189C76.139,21.419,83.153,26.312,85.786,33.92z   M59.268,67.53c4.312,3.863,10.964,3.498,14.827-0.815c2.077-2.319,2.912-5.313,2.587-8.187c1.308-0.668,2.517-1.463,3.622-2.367  c1.137,4.518,0.105,9.5-3.23,13.224c-5.335,5.955-14.52,6.46-20.475,1.125c-4.49-4.022-5.754-10.508-3.88-15.875  c1.048,1.066,3.371,2.758,3.331,2.733C55.288,60.932,56.364,64.928,59.268,67.53z M62.604,63.805  c2.259,2.024,5.743,1.832,7.766-0.427c0.795-0.887,1.229-1.966,1.349-3.068c0.783-0.171,1.565-0.372,2.341-0.641  c0.57-0.197,1.119-0.429,1.661-0.67c0.188,2.489-0.578,5.047-2.372,7.048c-3.495,3.902-9.513,4.232-13.415,0.737  c-2.534-2.27-3.52-5.733-2.971-8.862c1.212,0.712,2.488,1.311,3.82,1.765C60.779,61.204,61.389,62.716,62.604,63.805z   M61.796,60.017c2.833,0.804,5.857,1.002,8.877,0.506c-0.141,0.788-0.474,1.549-1.047,2.188c-1.656,1.848-4.506,2.005-6.354,0.349  C62.364,62.248,61.873,61.146,61.796,60.017z M69.865,36.619c0.733,0.526,1.432,1.299,1.745,2.206  c0.811,2.345-0.436,4.913-2.781,5.724c-1.172,0.406-2.463,0.217-3.501-0.287C67.335,42.129,68.912,39.551,69.865,36.619z   M64.603,45.006c1.325,0.744,3.009,1.023,4.553,0.488c2.866-0.992,4.391-4.131,3.399-6.996c-0.426-1.23-1.367-2.258-2.397-2.902  c0.042-0.158,0.096-0.31,0.135-0.469c0.302-1.24,0.467-2.48,0.536-3.71c-0.001,0.028,0,0.057-0.002,0.086  c2.466,0.991,4.572,2.986,5.507,5.689c1.713,4.95-0.921,10.371-5.871,12.084c-3.223,1.115-6.716,0.345-9.185-1.665  c-0.051,0.032-0.104,0.061-0.155,0.092C62.375,46.932,63.54,46.027,64.603,45.006z M70.791,50.219  c5.471-1.893,8.383-7.884,6.489-13.356c-1.077-3.112-3.544-5.382-6.424-6.424c0.012-1.457-0.136-2.89-0.425-4.287  c4.75,1.061,8.925,4.476,10.629,9.403c2.615,7.556-1.406,15.83-8.961,18.444c-5.714,1.977-11.898,0.099-15.675-4.173  c1.587-0.492,3.106-1.168,4.522-2.019c-0.191,0.116-0.381,0.234-0.577,0.344C63.114,50.549,67.107,51.494,70.791,50.219z   M54.99,11.329c10.447,2.544,16.876,13.114,14.331,23.561c-2.015,8.274-9.069,14-17.104,14.769  c-0.091-0.596-0.414-1.112-0.877-1.458c0.414-0.841,0.763-1.703,1.055-2.581c6.154-0.818,11.485-5.292,13.04-11.677  c2.023-8.304-3.087-16.705-11.391-18.728c-5.582-1.36-11.199,0.514-14.902,4.404c-1.464-0.461-2.967-0.747-4.48-0.872  C39.207,12.692,47.184,9.427,54.99,11.329z M51.677,24.931c-1.259-0.307-2.522-0.145-3.615,0.363c-0.466-0.507-0.953-1-1.478-1.467  c-0.533-0.474-1.084-0.913-1.65-1.321c2.161-1.512,4.931-2.133,7.689-1.461c5.089,1.24,8.222,6.389,6.982,11.478  c-0.794,3.26-3.2,5.7-6.159,6.719c0.006-1.398-0.142-2.792-0.418-4.164c1.3-0.718,2.313-1.948,2.691-3.501  C56.437,28.63,54.623,25.648,51.677,24.931z M51.441,25.902c2.411,0.587,3.894,3.026,3.307,5.437  c-0.284,1.166-1.008,2.104-1.945,2.707c-0.731-2.86-2.087-5.579-4.046-7.948C49.586,25.775,50.511,25.676,51.441,25.902z   M53.403,40.309c3.44-1.044,6.264-3.811,7.174-7.549c1.37-5.625-2.091-11.316-7.717-12.687c-3.189-0.777-6.396,0.005-8.828,1.849  c-1.228-0.79-2.514-1.436-3.845-1.936c3.463-3.418,8.555-5.033,13.62-3.799c7.768,1.892,12.549,9.752,10.657,17.52  c-1.416,5.813-6.176,9.941-11.736,10.864C53.109,43.172,53.323,41.743,53.403,40.309z M18.391,26.191  c7.144-8.035,19.494-8.761,27.53-1.616c6.705,5.962,8.285,15.535,4.484,23.214c-0.132-0.024-0.266-0.041-0.404-0.041  c-0.1,0-0.196,0.017-0.293,0.03c-0.689-1.035-1.475-1.986-2.326-2.866c2.236-5.849,0.83-12.948-4.119-17.348  c-6.387-5.679-16.204-5.103-21.883,1.285c-3.808,4.283-4.636,10.457-2.952,15.544c-1.073,1.038-2.037,2.175-2.855,3.409  C12.31,40.935,13.031,32.219,18.391,26.191z M38.353,39.461c-0.005-1.517-0.523-3.346-1.735-4.424  c-2.267-2.015-5.75-1.81-7.765,0.456c-0.87,0.978-1.302,2.592-1.357,3.817c-0.265,0.069-0.531,0.125-0.796,0.206  c-1.076,0.326-2.09,0.753-3.068,1.232c-0.333-2.63,0.338-5.782,2.232-7.913c3.481-3.915,9.497-4.268,13.412-0.787  c2.546,2.264,3.51,5.867,2.968,9.001C41.006,40.392,39.704,39.856,38.353,39.461z M37.349,39.204  c-2.828-0.674-5.825-0.762-8.816-0.147c0.098-0.916,0.426-2.178,1.067-2.899c1.649-1.854,4.499-2.022,6.353-0.373  C36.875,36.604,37.279,38.054,37.349,39.204z M39.94,31.301c-4.327-3.847-10.977-3.457-14.824,0.87  c-2.178,2.449-2.913,6.04-2.429,9.052c-1.244,0.691-2.392,1.506-3.444,2.419c-1.38-4.654-0.571-10.244,2.883-14.129  c5.312-5.975,14.496-6.514,20.471-1.202c4.514,4.013,5.881,10.453,4.011,15.833c-1.057-0.981-2.216-1.836-3.446-2.573  C43.906,38.008,42.849,33.888,39.94,31.301z M27.38,60.73c0.384,1.267,1.348,2.38,2.372,3.063c0.001-0.004,0.003-0.007,0.004-0.011  c-0.241,0.795-0.448,1.607-0.593,2.446c-0.097,0.563-0.154,1.123-0.204,1.682c0.003-0.031,0.002-0.063,0.005-0.094  c-2.425-1.087-4.583-3.19-5.412-5.927c-1.519-5.013,1.324-10.328,6.338-11.846c3.264-0.989,6.682-0.058,9.07,2.047  c0.027-0.015,0.055-0.029,0.081-0.044c-1.222,0.713-2.372,1.547-3.424,2.494c-1.296-0.797-3.003-1.143-4.568-0.668  C28.146,54.751,26.501,57.828,27.38,60.73z M30.084,62.784c-0.732-0.555-1.463-1.404-1.747-2.344  c-0.719-2.375,0.627-4.892,3.002-5.612c1.193-0.361,2.516-0.119,3.535,0.431C32.78,57.346,31.124,59.895,30.084,62.784z   M39.805,51.63c0.029-0.015,0.057-0.032,0.086-0.047c-2.651-2.503-6.56-3.628-10.292-2.497c-5.541,1.679-8.683,7.552-7.005,13.093  c0.955,3.154,3.465,5.547,6.304,6.7c-0.068,1.617,0.059,3.205,0.36,4.746c-0.03-0.156-0.066-0.313-0.092-0.469  c-4.706-1.244-8.889-4.826-10.401-9.817c-2.318-7.652,2.021-15.763,9.673-18.081c5.788-1.754,11.835,0.307,15.443,4.725  c0.261-0.07,0.522-0.133,0.783-0.195C42.961,50.193,41.333,50.823,39.805,51.63z M44.935,49.72  c-3.817-4.971-10.442-7.341-16.785-5.419c-8.18,2.478-12.818,11.148-10.34,19.328c1.665,5.497,6.332,9.397,11.562,10.611  c0.335,1.475,0.84,2.893,1.481,4.243c-7.566-0.8-14.531-5.969-16.871-13.694c-3.117-10.29,2.718-21.199,13.009-24.316  c8.336-2.526,17.054,0.844,21.729,7.679c-0.397,0.276-0.693,0.678-0.847,1.146C46.876,49.371,45.894,49.507,44.935,49.72z   M55.362,77.074c-2.06,1.679-4.802,2.499-7.62,2.012c-5.161-0.894-8.634-5.82-7.74-10.981c0.581-3.359,2.875-5.992,5.826-7.183  c0.083,1.4,0.318,2.789,0.684,4.148c-0.003-0.011-0.006-0.022-0.01-0.034c-1.306,0.798-2.278,2.128-2.559,3.75  c-0.517,2.988,1.493,5.84,4.481,6.358c1.305,0.226,2.583-0.031,3.653-0.639c-0.154-0.149-0.296-0.309-0.441-0.466  c0.312,0.318,0.623,0.638,0.959,0.939c1.018,0.912,2.106,1.698,3.24,2.369C55.677,77.258,55.516,77.171,55.362,77.074z   M46.786,66.04c0.907,2.808,2.428,5.45,4.554,7.709c-0.824,0.407-1.773,0.579-2.746,0.41c-2.445-0.423-4.09-2.757-3.666-5.202  C45.141,67.729,45.837,66.704,46.786,66.04z M80.799,72.72c-7.174,8.009-19.527,8.688-27.536,1.513  c-6.483-5.807-8.135-14.998-4.732-22.54c0.395,0.343,0.905,0.558,1.47,0.558c0.223,0,0.434-0.042,0.637-0.103  c0.442,0.623,0.927,1.205,1.43,1.768c-0.033-0.034-0.069-0.066-0.102-0.101c-2.266,5.844-0.971,13.015,3.966,17.438  c6.366,5.703,16.185,5.163,21.887-1.203c3.68-4.108,4.742-9.649,3.334-14.598c1.141-1.041,2.138-2.211,3.009-3.466  C87.069,58.751,86.026,66.885,80.799,72.72z"></path>
+                </svg>
+            </div>
+        </section>
+
+        <section id="jqueryUi">
+            <h3>jQuery UI Plugin</h3>
+            <p>jQuery UI is a popular collection of jQuery plugins that are grouped into four categories:</p>
+            <ol>
+                <li><strong>Interactions</strong> - support for dragging, dropping, sorting, selecting, and resizing</li>
+                <li><strong>Widgets</strong> - buttons, accordions, date pickers, dialog boxes, sliders, etc.</li>
+                <li><strong>Effects</strong> - color animation, easing functions, and animation effects</li>
+                <li><strong>Utilities</strong> - position elements on the screen, widget factory</li>
+            </ol>
+            <p>Developers can obtain the jQuery UI library from <a href="https://jqueryui.com/" target="_blank">jqueryui.com</a> and place the library on their web server, or developers can use a CDN, such as <a href="https://developers.google.com/speed/libraries/" target="_blank">Google Hosted Libraries</a>, to download the library to the browser. The library works with an external stylesheet, which defines numerous classes needed by the library. <strong>The jQuery UI stylesheet must be downloaded to the browser along with the jQuery UI library</strong>.</p>
+            <pre>
                     <code>
 <!-- 				 -->// you NEED the jQuery library, AND jQuery UI, AND the 
 <!-- 				 -->// jQuery UI stylesheet in order to use jQuery UI
@@ -97,33 +97,33 @@
 
                     </code>
                 </pre>
-                <h4 id="subsec-topic" class="sr-only">jQuery Accordion Example</h4>
-                <section id="accordion" class="subsec">
-                    <h5>Topic 1</h5>
-                    <section class="no_shadow">
-                        <p>Oh, I don't have time for this. I have to go and buy a single piece of fruit with a coupon and then return it, making people wait behind me while I complain.</p>
-                    </section>
-                    <h5>Topic 2</h5>
-                    <section class="no_shadow">
-                        <p>Please enjoy this placeholder photo of Zoidberg.</p>
-                        <img src="https://assets.codepen.io/1351055/zoidberg.jpg" alt="Need a placeholder image? Why not Zoidberg?">
-                    </section>
-                    <h5>Topic 3</h5>
-                    <section class="no_shadow">
-                        <ul>
-                            <li>Space, the final frontier.</li> 
-                            <li>These are the voyages of the Starship Enterprise.</li> 
-                            <li>Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.</li> 
-                            <li>Many say exploration is part of our destiny, but it's actually our duty to future generations and their quest to ensure the survival of the human species.</li>		
-                        </ul>
-                    </section>
+            <h4 id="subsec-topic" class="sr-only">jQuery Accordion Example</h4>
+            <section id="accordion" class="subsec">
+                <h5>Topic 1</h5>
+                <section class="no_shadow">
+                    <p>Oh, I don't have time for this. I have to go and buy a single piece of fruit with a coupon and then return it, making people wait behind me while I complain.</p>
+                </section>
+                <h5>Topic 2</h5>
+                <section class="no_shadow">
+                    <p>Please enjoy this placeholder photo of Zoidberg.</p>
+                    <img src="https://assets.codepen.io/1351055/zoidberg.jpg" alt="Need a placeholder image? Why not Zoidberg?">
+                </section>
+                <h5>Topic 3</h5>
+                <section class="no_shadow">
+                    <ul>
+                        <li>Space, the final frontier.</li>
+                        <li>These are the voyages of the Starship Enterprise.</li>
+                        <li>Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.</li>
+                        <li>Many say exploration is part of our destiny, but it's actually our duty to future generations and their quest to ensure the survival of the human species.</li>
+                    </ul>
                 </section>
             </section>
+        </section>
 
-            <section id="animations">
-                <h3>jQuery UI Animations</h3>
-                <p>jQuery UI provides the ability to animate color transitions and the adding and removing of CSS classes. jQuery UI also adds some fun animation effects. <a href="https://api.jqueryui.com/category/effects/" target="_blank">View the documentation on jQuery UI effects on the jQuery UI website</a>.</p>
-                <pre>
+        <section id="animations">
+            <h3>jQuery UI Animations</h3>
+            <p>jQuery UI provides the ability to animate color transitions and the adding and removing of CSS classes. jQuery UI also adds some fun animation effects. <a href="https://api.jqueryui.com/category/effects/" target="_blank">View the documentation on jQuery UI effects on the jQuery UI website</a>.</p>
+            <pre>
                     <code>
 <!-- 		   		 -->// Color animation
 <!-- 		   		 -->$("#colorAnim").hover(function() {
@@ -156,76 +156,93 @@
 <!-- 				 -->});
                     </code>
                 </pre>
-                <svg version="1.1" viewBox="0.66 25.33 98.69 49.34" xmlns="http://www.w3.org/2000/svg" xml:space="preserve">
-                    <g>
-                        <path id="path1" d="m99.344 74.672h-10.938c0-13.723-7.3203-26.398-19.203-33.262-11.883-6.8594-26.523-6.8594-38.406 0-11.883 6.8633-19.203 19.539-19.203 33.262h-10.938c0-17.629 9.4062-33.918 24.672-42.734 15.266-8.8125 34.078-8.8125 49.344 0 15.266 8.8164 24.672 25.105 24.672 42.734z"/>
-                        <path id="path2" d="m85.422 74.672h-10.938c0-8.7461-4.668-16.832-12.242-21.203-7.5742-4.375-16.91-4.375-24.484 0-7.5742 4.3711-12.242 12.457-12.242 21.203h-10.938c0-12.656 6.75-24.348 17.711-30.676 10.961-6.3281 24.461-6.3281 35.422 0 10.961 6.3281 17.711 18.02 17.711 30.676z"/>
-                        <path id="path3" d="m71.875 74.672h-10.938c0-6.0391-4.8984-10.938-10.938-10.938s-10.938 4.8984-10.938 10.938h-10.938c0-7.8164 4.168-15.035 10.938-18.945 6.7695-3.9062 15.105-3.9062 21.875 0 6.7695 3.9102 10.938 11.129 10.938 18.945z"/>
-                    </g>
-                </svg>
-                <div id="switchClass">
-                    <p class="style1">Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.</p>
-                    <button type="button">Animate!</button>
-                </div>
-            </section>
+            <svg version="1.1" viewBox="0.66 25.33 98.69 49.34" xmlns="http://www.w3.org/2000/svg" xml:space="preserve">
+                <g>
+                    <path id="path1" d="m99.344 74.672h-10.938c0-13.723-7.3203-26.398-19.203-33.262-11.883-6.8594-26.523-6.8594-38.406 0-11.883 6.8633-19.203 19.539-19.203 33.262h-10.938c0-17.629 9.4062-33.918 24.672-42.734 15.266-8.8125 34.078-8.8125 49.344 0 15.266 8.8164 24.672 25.105 24.672 42.734z" />
+                    <path id="path2" d="m85.422 74.672h-10.938c0-8.7461-4.668-16.832-12.242-21.203-7.5742-4.375-16.91-4.375-24.484 0-7.5742 4.3711-12.242 12.457-12.242 21.203h-10.938c0-12.656 6.75-24.348 17.711-30.676 10.961-6.3281 24.461-6.3281 35.422 0 10.961 6.3281 17.711 18.02 17.711 30.676z" />
+                    <path id="path3" d="m71.875 74.672h-10.938c0-6.0391-4.8984-10.938-10.938-10.938s-10.938 4.8984-10.938 10.938h-10.938c0-7.8164 4.168-15.035 10.938-18.945 6.7695-3.9062 15.105-3.9062 21.875 0 6.7695 3.9102 10.938 11.129 10.938 18.945z" />
+                </g>
+            </svg>
+            <div id="switchClass">
+                <p class="style1">Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.</p>
+                <button type="button">Animate!</button>
+            </div>
+        </section>
 
-            <section id="widgets">
-                <h3>jQuery UI Widgets</h3>
-                <p>The jQuery UI plugin provides numerous widgets, including a progress bar, menu, and slider. Some jQuery UI plugin widgets are similar to their HTML counter-part, but other widgets like the accordion and tabs do not have an HTML equivalent. The datepicker widget is especially useful since all browsers do not currently support the HTML datepicker widget using <span class="code">&lt;input type="date"&gt;</span>.</p>
-                <div class="tabs">
-                    <ul>
-                        <li><a href="#date">Datepicker</a></li>
-                        <li><a href="#autocomp">AutoComplete</a></li>
-                        <li><a href="#dialogExample">Dialog</a></li>
-                        <li><a href="#tooltip">Tooltip</a></li>
-                    </ul>
+        <section id="widgets">
+            <h3>jQuery UI Widgets</h3>
+            <p>The jQuery UI plugin provides numerous widgets, including a progress bar, menu, and slider. Some jQuery UI plugin widgets are similar to their HTML counter-part, but other widgets like the accordion and tabs do not have an HTML equivalent. The datepicker widget is especially useful since all browsers do not currently support the HTML datepicker widget using <span class="code">&lt;input type="date"&gt;</span>.</p>
+            <div class="tabs">
+                <ul>
+                    <li><a href="#date">Datepicker</a></li>
+                    <li><a href="#autocomp">AutoComplete</a></li>
+                    <li><a href="#dialogExample">Dialog</a></li>
+                    <li><a href="#tooltip">Tooltip</a></li>
+                </ul>
 
-                    <section id="date" class="subsec">
-                        <h4>Datepicker</h4>
-                        <div id="datepicker"></div>
-                        <p id="dateDisplay"></p>
-                    </section>
+                <section id="date" class="subsec">
+                    <h4>Datepicker</h4>
+                    <div id="datepicker"></div>
+                    <p id="dateDisplay"></p>
+                </section>
 
-                    <section id="autocomp" class="subsec">
-                        <h4>Autocomplete</h4>
-                        <p>With the autocomplete widget you can make it easier for users to search for terms on your site. You define the list of terms that users would search for.</p>
-                        <div>
-                            <label for="mentor">Search for a Faculty Mentor</label>
-                            <input type="text" name="mentor" id="mentor">
-                        </div>
-                        <p id="auto-output"></p>
-                    </section>
+                <section id="autocomp" class="subsec">
+                    <h4>Autocomplete</h4>
+                    <p>With the autocomplete widget you can make it easier for users to search for terms on your site. You define the list of terms that users would search for.</p>
+                    <div>
+                        <label for="mentor">Search for a Faculty Mentor</label>
+                        <input type="text" name="mentor" id="mentor">
+                    </div>
+                    <p id="auto-output"></p>
+                </section>
 
-                    <section id="dialogExample" class="subsec">
-                        <h4>Dialog</h4>
-                        <p>Open content in an interactive overlay. (These are also called modals).</p>
-                        <button id="openDialog">Open Dialog</button>
-                        <div id="dialog" title="Basic Dialog">
-                            <p>This is the text that will show up in our dialog.</p>
-                        </div>
-                    </section>
+                <section id="dialogExample" class="subsec">
+                    <h4>Dialog</h4>
+                    <p>Open content in an interactive overlay. (These are also called modals).</p>
+                    <button id="openDialog">Open Dialog</button>
+                    <div id="dialog" title="Basic Dialog">
+                        <p>This is the text that will show up in our dialog.</p>
+                    </div>
+                </section>
 
-                    <section id="tooltip" class="subsec">
-                        <h4>Tooltip</h4>
-                        <p>A tooltip is usually small text that is visible when you hover over an interactive element. The native tooltips use the title attribute to display text, but the text is small and cannot be styled. With jQuery you have more control over these.</p>
-                        <div>
-                            <button id="btn1" title="Go to the home page">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-home"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M5 12l-2 0l9 -9l9 9l-2 0" /><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" /><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" /></svg>
-                            </button>
-                            <button id="btn2" title="View your account">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-user-circle"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M9 10a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /><path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855" /></svg>
-                            </button>
-                            <button id="btn3" title="Go to the cart">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-cart"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M15 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /></svg>
+                <section id="tooltip" class="subsec">
+                    <h4>Tooltip</h4>
+                    <p>A tooltip is usually small text that is visible when you hover over an interactive element. The native tooltips use the title attribute to display text, but the text is small and cannot be styled. With jQuery you have more control over these.</p>
+                    <div>
+                        <button id="btn1" title="Go to the home page">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-home">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M5 12l-2 0l9 -9l9 9l-2 0" />
+                                <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+                                <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+                            </svg>
                         </button>
-                        </div>
-                    </section>
-                </div>
-            </section>
-        </main>
+                        <button id="btn2" title="View your account">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-user-circle">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                                <path d="M9 10a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                                <path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855" />
+                            </svg>
+                        </button>
+                        <button id="btn3" title="Go to the cart">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-cart">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M4 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                                <path d="M15 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                                <path d="M17 17h-11v-14h-2" />
+                                <path d="M6 5l14 1l-1 7h-13" />
+                            </svg>
+                        </button>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
 
-        <footer>
-            <p>Copyright &copy; <span>2026</span> Prof. Barnett GIT418</p>
-        </footer>
-    </body>
+    <footer>
+        <p>Copyright &copy; <span>2026</span> Prof. Barnett GIT418</p>
+    </footer>
+</body>
+
 </html>
